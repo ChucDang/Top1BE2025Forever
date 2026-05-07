@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>Amber Racing & Sport - Nhớt cao cấp cho TOP 1 BE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #1a2c3e;
+      line-height: 1.4;
+      padding: 16px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0b2b26 0%, #1e5a4a 100%);
+      padding: 40px 24px;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+    .hero h1 i {
+      color: #f5b042;
+      margin-right: 8px;
+    }
+    .hero .badge {
+      background: #f5b042;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1e2a2a;
+      margin-top: 12px;
+    }
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.92;
+      max-width: 700px;
+      margin: 16px auto 0;
+    }
+
+    /* Nội dung chính */
+    .content {
+      padding: 32px 20px;
+    }
+    @media (min-width: 768px) {
+      .content {
+        padding: 44px 36px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* section title */
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-left: 5px solid #f5b042;
+      padding-left: 18px;
+    }
+    .section-title i {
+      color: #f5b042;
+      font-size: 1.6rem;
+    }
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 1.9rem;
+        padding-left: 24px;
+      }
+    }
+
+    /* Premium cards (2 cột trên desktop, 1 trên mobile) */
+    .premium-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .premium-card {
+      flex: 1;
+      min-width: 280px;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2edf2;
+      transition: 0.2s;
+    }
+    .premium-card:hover {
+      transform: translateY(-3px);
+    }
+    .card-header-premium {
+      background: #fef6e8;
+      padding: 20px 16px;
+      text-align: center;
+      border-bottom: 2px solid #f5e2c1;
+      border-radius: 28px 28px 0 0;
+    }
+    .card-header-premium h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #b45f1b;
+      margin-bottom: 6px;
+    }
+    .card-header-premium .sub {
+      font-weight: 600;
+      color: #2c6e5c;
+      background: #e0f0ea;
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+    }
+    .price-highlight {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #c2410c;
+      margin: 10px 0 4px;
+    }
+    .combo-list {
+      padding: 16px 18px 24px;
+    }
+    .combo-item {
+      background: #fafcff;
+      border-radius: 20px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      border: 1px solid #e9f0f3;
+    }
+    .combo-item strong {
+      font-size: 1rem;
+      color: #1e4a3b;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .combo-price {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #b45309;
+      margin: 6px 0 4px;
+    }
+    .save-tag, .gift-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 30px;
+    }
+    .save-tag {
+      background: #e6f4ea;
+      color: #2b7a4b;
+    }
+    .gift-badge {
+      background: #fef1c7;
+      color: #a16207;
+      margin-top: 6px;
+    }
+
+    /* Bảng giá phổ thông */
+    .old-section {
+      margin-top: 32px;
+      background: #f9fbfd;
+      border-radius: 28px;
+      padding: 20px 16px;
+    }
+    .price-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .price-card {
+      background: white;
+      border-radius: 24px;
+      flex: 1;
+      min-width: 220px;
+      border: 1px solid #e2edf2;
+    }
+    .card-header {
+      background: #f8fafc;
+      padding: 16px 12px;
+      text-align: center;
+      border-bottom: 2px solid #e0edf0;
+      border-radius: 24px 24px 0 0;
+    }
+    .card-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1e4a3b;
+    }
+    .price {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #c2410c;
+      background: #fff1e6;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 60px;
+      margin-top: 8px;
+    }
+    .card-body {
+      padding: 16px;
+      text-align: center;
+    }
+
+    /* Features */
+    .features {
+      background: #fefcf7;
+      border-radius: 28px;
+      padding: 24px 20px;
+      margin: 40px 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    @media (min-width: 640px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1000px) {
+      .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .feature-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      background: #1e4a3b;
+      color: #f5b042;
+      width: 48px;
+      height: 48px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    /* Info row */
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 40px 0 32px;
+    }
+    .info-box {
+      flex: 1;
+      background: #f9fafb;
+      border-radius: 24px;
+      padding: 20px;
+      border: 1px solid #e4ecef;
+    }
+    .address {
+      background: white;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+      margin: 12px 0;
+      border: 1px solid #cbdadf;
+      font-size: 0.9rem;
+      word-break: break-word;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s;
+      margin-top: 12px;
+    }
+    .contact-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin: 32px 0 20px;
+    }
+    .gallery-item {
+      background: #f1f5f9;
+      border-radius: 24px;
+      flex: 1;
+      min-width: 130px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      color: #2c6e5c;
+      border: 1px solid #dce6e9;
+      text-align: center;
+      padding: 12px;
+    }
+    .gallery-item i {
+      font-size: 2.8rem;
+      color: #f5b042;
+    }
+    .gallery-item span {
+      font-size: 0.85rem;
+    }
+
+    footer {
+      background: #eef2f0;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #4f6f6a;
+    }
+
+    /* Tối ưu touch & mobile nhỏ */
+    @media (max-width: 600px) {
+      body {
+        padding: 8px;
+      }
+      .hero {
+        padding: 32px 16px;
+      }
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      .section-title {
+        font-size: 1.4rem;
+        padding-left: 14px;
+      }
+      .price-highlight {
+        font-size: 1.6rem;
+      }
+      .combo-item {
+        padding: 12px;
+      }
+      .combo-item strong {
+        font-size: 0.95rem;
+      }
+      .contact-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+      }
+      .gallery-item {
+        min-width: 110px;
+        height: 120px;
+      }
+      .gallery-item i {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .price {
+        font-size: 1.4rem;
+        padding: 4px 14px;
+      }
+      .card-header h3 {
+        font-size: 1rem;
+      }
+      .feature-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+      }
+    }
+
+    /* misc */
+    .note {
+      font-size: 0.75rem;
+      color: #6b7c86;
+    }
+    .small-note {
+      font-size: 0.7rem;
+      color: #6f8f8a;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1><i class="fas fa-oil-can"></i> AMBER Oil đồng hành cùng TOP 1 BE trên mọi nẻo đường </h1>
+    <div class="badge">Độc quyền ưu đãi TOP 1 BE</div>
+    <p>Trải nghiệm nhớt nhập khẩu công nghệ Đức, giúp xe bền, tiết kiệm xăng, giảm chi phí bảo dưỡng – đồng hành cùng anh em tài xế!</p>
+  </div>
+
+  <div class="content">
+    <!-- Giới thiệu -->
+    <div style="background:#eef2f5; border-radius: 24px; padding: 16px 20px; margin-bottom: 32px;">
+      <p><i class="fas fa-handshake" style="color:#f5b042; margin-right: 8px;"></i> <strong>Công ty TNHH Dầu Nhờn Amber & Nhà Phân Phối Song Kiên</strong> gửi đến anh em <strong>TOP 1 BE</strong> chương trình dùng thử ưu đãi thiết thực.</p>
+      <br>
+      <p>Nhà phân phối <strong>chủ động trợ giá, cắt giảm toàn bộ chi phí</strong> để mang đến mức giá thấp nhất có thể, phổ biến thương hiệu Amber – mức giá đã được hỗ trợ tối đa (đây không phải là giá thị trường) và giữ ổn định trong bối cảnh chiến tranh.</p>
+    </div>
+
+<!-- Cam kết -->
+    <div class="features">
+      <div class="section-title" style="border-left-color: #1e4a3b;">
+        <i class="fas fa-medal"></i>
+        <span>Cam kết từ Amber</span>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><div class="feature-text"><h4>Chu kỳ 2.500 km</h4><p>Gấp rưỡi nhớt thường, tiết kiệm chi phí</p></div></div>
+        <div class="feature-item"><div class="feature-icon"><i class="fas fa-gas-pump"></i></div><div class="feature-text"><h4>Tiết kiệm xăng 5-7%</h4><p>Giảm ma sát nội bộ</p></div></div>
+        <div class="feature-item"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><div class="feature-text"><h4>Bảo vệ động cơ</h4><p>Phụ gia chống mài mòn, oxy hóa</p></div></div>
+        <div class="feature-item"><div class="feature-icon"><i class="fas fa-broom"></i></div><div class="feature-text"><h4>Làm sạch cặn bẩn</h4><p>Vận hành êm, bốc hơn</p></div></div>
+      </div>
+    </div>
+
+    <!-- Sản phẩm phổ thông (giá trợ cước) -->
+    <div class="old-section">
+      <div class="section-title" style="margin-bottom: 12px;">
+        <i class="fas fa-tags"></i>
+        <span>Chương trình dùng thử – Giá trợ cước</span>
+      </div>
+      <div class="price-grid">
+        <div class="price-card"><div class="card-header"><h3>Nhớt số Amber</h3><div>xe côn tay, xe số</div></div><div class="card-body"><div class="price">96.000₫ / lon</div><div class="note">trợ giá đặc biệt</div></div></div>
+        <div class="price-card"><div class="card-header"><h3>Nhớt ga Amber</h3><div>xe tay ga</div></div><div class="card-body"><div class="price">106.000₫ / lon</div><div class="note">trợ giá đặc biệt</div></div></div>
+        <div class="price-card"><div class="card-header"><h3>Nhớt hộp số</h3><div>xe tay ga</div></div><div class="card-body"><div class="price">30.000₫ / tuýp</div><div class="note">trợ giá đặc biệt</div></div></div>
+      </div>
+      <p class="note" style="text-align:center; margin-top: 16px;"><i class="fas fa-info-circle"></i> Giá chưa bao gồm công thay nhớt. Kho không hỗ trợ thay tại chỗ.</p>
+    </div>
+
+
+    <!-- SẢN PHẨM CAO CẤP -->
+    <div class="section-title">
+      <i class="fas fa-tachometer-alt"></i>
+      <span>GIÁ ƯU ĐÃI NIÊM YẾT CHO ĐƠN HÀNG TIẾP THEO</span>
+    </div>
+    <div class="premium-grid">
+      <!-- Amber Racing GEN.1 (xe số) -->
+      <div class="premium-card">
+        <div class="card-header-premium">
+          <h3><i class="fas fa-motorcycle"></i> Amber Racing GEN.1</h3>
+          <div class="sub">0.8L – Xe số / côn tay</div>
+          <div class="price-highlight">121.920₫ / lon</div>
+          <div style="font-size:0.75rem;">(gốc 127.000₫, giảm 4% TOP 1 BE)</div>
+        </div>
+        <div class="combo-list">
+          <div class="combo-item">
+            <strong><i class="fas fa-box"></i> Combo 2 lon</strong>
+            <div>Giảm 5% + 4% thành viên</div>
+            <div class="combo-price">115.570₫ / lon → Tổng: 231.140₫</div>
+            <div class="save-tag">Tiết kiệm 22.860₫</div>
+          </div>
+          <div class="combo-item">
+            <strong><i class="fas fa-boxes"></i> Combo 3 lon</strong>
+            <div>Giảm 7% + 4% thành viên</div>
+            <div class="combo-price">113.030₫ / lon → Tổng: 339.090₫</div>
+            <div class="save-tag">Tiết kiệm 41.910₫</div>
+          </div>
+          <div class="combo-item">
+            <strong><i class="fas fa-layer-group"></i> Combo 4 lon</strong>
+            <div>Giảm 10% + 4% thành viên</div>
+            <div class="combo-price">109.220₫ / lon → Tổng: 436.880₫</div>
+            <div class="save-tag">Tiết kiệm 71.120₫</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amber Sport GEN.2 (xe ga) -->
+      <div class="premium-card">
+        <div class="card-header-premium">
+          <h3><i class="fas fa-scooter"></i> Amber Sport GEN.2</h3>
+          <div class="sub">0.8L – Xe tay ga cao cấp</div>
+          <div class="price-highlight">131.520₫ / lon</div>
+          <div style="font-size:0.75rem;">(gốc 137.000₫, giảm 4% TOP 1 BE)</div>
+        </div>
+        <div class="combo-list">
+          <div class="combo-item">
+            <strong><i class="fas fa-box"></i> Combo 2 lon</strong>
+            <div>Giảm 5% + 4% thành viên</div>
+            <div class="combo-price">124.670₫ / lon → Tổng: 249.340₫</div>
+            <div class="save-tag">Tiết kiệm 24.660₫</div>
+          </div>
+          <div class="combo-item">
+            <strong><i class="fas fa-boxes"></i> Combo 3 lon</strong>
+            <div>Giảm 7% + 4% thành viên</div>
+            <div class="combo-price">121.930₫ / lon → Tổng: 365.790₫</div>
+            <div class="save-tag">Tiết kiệm 45.210₫</div>
+          </div>
+          <div class="combo-item">
+            <strong><i class="fas fa-gift"></i> Combo 3 + TẶNG 1 nhớt hộp số (lap)</strong>
+            <div>Giảm 4% thành viên</div>
+            <div class="combo-price">131.520₫ x 3 = 394.560₫</div>
+            <div class="gift-badge">Tặng 1 tuýp nhớt hộp số (láp)</div>
+            <div class="save-tag">Tiết kiệm 56.440₫</div>
+          </div>
+          <div class="combo-item">
+            <strong><i class="fas fa-layer-group"></i> Combo 4 lon</strong>
+            <div>Giảm 10% + 4% thành viên</div>
+            <div class="combo-price">117.820₫ / lon → Tổng: 471.280₫</div>
+            <div class="save-tag">Tiết kiệm 76.720₫</div>
+          </div>
+          <div class="combo-item">
+            <strong><i class="fas fa-gift"></i> Combo 4 + TẶNG 2 nhớt hộp số (láp)</strong>
+            <div>Giảm 4% thành viên</div>
+            <div class="combo-price">131.520₫ x 4 = 526.080₫</div>
+            <div class="gift-badge">Tặng 2 tuýp nhớt hộp số (láp)</div>
+            <div class="save-tag">Tiết kiệm 97.920₫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Nhận hàng & liên hệ -->
+    <div class="info-row">
+      <div class="info-box">
+        <h3><i class="fas fa-map-marker-alt"></i> Nhận hàng tại kho</h3>
+        <div class="address"><i class="fas fa-warehouse"></i> 170 Ung Văn Kiêm, Phường 25, Quận Bình Thạnh, TP. HCM</div>
+        <p><i class="fas fa-clock"></i> Linh hoạt – ghé khi có cuốc xe gần. <strong>Nhắn Zalo trước 10 phút</strong> để lấy hàng nhanh.</p>
+        <a href="https://zalo.me/0357182609" target="_blank" class="contact-btn"><i class="fab fa-zalo"></i> Đặt hàng qua Zalo</a>
+        <div style="margin-top: 12px;"><i class="fas fa-phone-alt"></i> Hotline / Zalo: <strong>0357 182 609</strong></div>
+      </div>
+    </div>
+
+  <footer>
+    <p><i class="far fa-registered"></i> Công ty TNHH Dầu Nhờn Amber – Nhà phân phối Song Kiên<br>
+    Kho: 170 Ung Văn Kiêm, P.25, Bình Thạnh, TP.HCM | Zalo/Hotline: 0357 182 609<br>
+  </footer>
+</div>
+</body>
+</html>

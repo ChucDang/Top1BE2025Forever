@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Cho Cao Thủ - TOP 1 BE</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        header h1 {
+            color: #ffd700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Menu dạng button */
+        .menu {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .menu button {
+            background: #ffd700;
+            color: #1e3c72;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            margin: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .menu button:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #ffd700;
+            margin-top: 20px;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+        }
+
+        .note {
+            background: rgba(255, 255, 255, 0.15);
+            border-left: 4px solid #ffd700;
+            padding: 10px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #ffd700;
+        }
+
+        /* Nút quay lại menu */
+        .back-to-menu {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ffd700;
+            color: #1e3c72;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s;
+        }
+
+        .back-to-menu:hover {
+            background: #fff;
+            color: #2a5298;
+        }
+
+        .tips {
+            list-style-type: disc;
+        }
+
+        .tips li {
+            margin-bottom: 20px;
+        }
+
+        .tip-img {
+            display: block;
+            margin: 10px auto;
+            /* canh giữa hình */
+            max-width: 100%;
+            /* responsive: co giãn theo màn hình */
+            height: auto;
+            border-radius: 8px;
+            /* bo góc cho đẹp */
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .menu button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HƯỚNG DẪN CHẠY CHO CAO THỦ BE</h1>
+        <p>Vững tay lái, khởi tương lai - Cùng BE bắt đầu hành trình mới</p>
+    </header>
+
+    <!-- Menu dạng button -->
+    <div class="menu" id="menu">
+        <button onclick="document.getElementById('chanhdao').scrollIntoView()">Lỗ hổng GHDN</button>
+    </div>
+
+    <div class="content">
+        <div class="note">
+            Có thể dính líu đến pháp luật và có thể bị truy cứu trách nhiệm hình sự, suy nghĩ kỹ trước khi làm.
+        </div>
+
+        <h2 id="chanhdao">TÀ ĐẠO - LỖ HỔNG GIAO HÀNG DOANH NGHIỆP</h2>
+        <p>
+           Khi nhận đơn GHDN mà khách trả tiền mặt thì khi kết thúc chuyến thì tiền sẽ được trừ vào Ví Tài Xế. Thay vì nạp trả lại, ta tiếp tục lựa những đơn thu tiền mặt khác. Bạn chạy âm ví luôn nhưng vẫn nổ cuốc do thiếu tài xế chạy!
+        </p>
+        <p>Lựa chọn thời điểm những tháng cuối năm, nhu cầu giao hàng nhiều, làm 1 cú ăn Tết xong qua App khác chạy!</p>
+        <p><strong>Ví dụ: </strong>Đơn hàng Shoppee 1tr2, sau khi hoàn thành ví tài xế âm 1tr2. Thay vì nạp tiền vào trả, bạn không cần nạp, tắt auto nhận cuốc, tắt hết các dịch vụ, chỉ chạy GHDN và chỉ chọn cuốc tiền mặt, cho đến khi BE khóa App. Đã có người làm được và âm ví gần 100 triệu.</p>
+        <footer>
+            © 2026 Đầu nhờn Amber công nghệ Đức - Hân hạnh đồng hành cùng TOP 1 BE!
+        </footer>
+
+        <!-- Nút quay lại menu -->
+        <button class="back-to-menu" onclick="document.getElementById('menu').scrollIntoView()">☰</button>
+    </div>
+</body>
+
+</html>
